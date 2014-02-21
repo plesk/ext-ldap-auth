@@ -1,0 +1,25 @@
+<?php
+
+class Modules_LdapAuth_Auth extends pm_Hook_Auth
+{
+
+    public function auth($login, $password)
+    {
+        $ch = curl_init();
+
+        curl_setopt($ch, CURLOPT_URL, 'ldap://' . pm_Settings::get('host') . ':389/');
+        curl_setopt($ch, CURLOPT_HEADER, false);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_USERPWD, pm_Settings::get('loginPrefix') . "$login:$password");
+        $result = curl_exec($ch);
+        curl_close($ch);
+
+        return false !== $result;
+    }
+
+    public function isEnabled()
+    {
+        return (bool)pm_Settings::get('enable');
+    }
+
+}
