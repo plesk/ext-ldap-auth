@@ -2,8 +2,8 @@
 
 $messages = [
     'settingsPageTitle' => 'LDAP Auth Settings',
-    'settingsSaved' => 'Settings were saved.',
+    'settingsSaved' => 'The settings were saved.',
     'fieldEnable' => 'Enable',
     'fieldHost' => 'Host',
-    'fieldLoginPrefix' => 'Login Prefix',
+    'fieldLoginPrefix' => 'Login prefix',
 ];
