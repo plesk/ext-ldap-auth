@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 1999-2014. Parallels IP Holdings GmbH. All Rights Reserved. -->
 <module>
   <id>ldap-auth</id>
   <name>LDAP Auth</name>
   <description>Authentication via LDAP.</description>
   <version>1.0</version>
-  <release>2</release>
+  <release>3</release>
   <vendor>Parallels, Inc.</vendor>
   <plesk_min_version>12.0</plesk_min_version>
 </module>
