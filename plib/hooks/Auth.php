@@ -1,5 +1,5 @@
 <?php
-// Copyright 1999-2014. Parallels IP Holdings GmbH. All Rights Reserved.
+// Copyright 1999-2015. Parallels IP Holdings GmbH. All Rights Reserved.
 class Modules_LdapAuth_Auth extends pm_Hook_Auth
 {
 
