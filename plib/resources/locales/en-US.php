@@ -6,4 +6,5 @@ $messages = [
     'fieldEnable' => 'Enable',
     'fieldHost' => 'Host',
     'fieldLoginPrefix' => 'Login prefix',
+    'fieldDisableNativeAuth' => 'Disable Plesk native authentication',
 ];

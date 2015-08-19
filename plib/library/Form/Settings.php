@@ -20,6 +20,13 @@ class Modules_LdapAuth_Form_Settings extends pm_Form_Simple
             'value' => pm_Settings::get('loginPrefix', 'DOMAIN\\'),
         ));
 
+        if (version_compare(pm_ProductInfo::getVersion(), '12.5.29', '>=')) {
+            $this->addElement('checkbox', 'disableNativeAuth', array(
+                'label' => $this->lmsg('fieldDisableNativeAuth'),
+                'value' => (bool)pm_Settings::get('disableNativeAuth'),
+            ));
+        }
+
         $this->addControlButtons(array(
             'cancelHidden' => true,
         ));
@@ -31,6 +38,10 @@ class Modules_LdapAuth_Form_Settings extends pm_Form_Simple
         pm_Settings::set('enable', (bool)$values['enable']);
         pm_Settings::set('host', $values['host']);
         pm_Settings::set('loginPrefix', $values['loginPrefix']);
+
+        if (version_compare(pm_ProductInfo::getVersion(), '12.5.29', '>=')) {
+            pm_Settings::set('disableNativeAuth', (bool)$values['disableNativeAuth']);
+        }
     }
 
 }

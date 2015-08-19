@@ -4,8 +4,8 @@
   <id>ldap-auth</id>
   <name>LDAP Auth</name>
   <description>Authentication via LDAP.</description>
-  <version>1.0</version>
-  <release>7</release>
+  <version>2.0</version>
+  <release>1</release>
   <vendor>Odin</vendor>
   <plesk_min_version>12.0</plesk_min_version>
 </module>
