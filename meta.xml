@@ -4,7 +4,7 @@
   <id>ldap-auth</id>
   <name>LDAP Auth</name>
   <description>Authentication via LDAP.</description>
-  <url>https://www.plesk.com</url>
+  <url>https://github.com/plesk/ext-ldap-auth</url>
   <version>2.0</version>
   <release>3</release>
   <vendor>Plesk</vendor>
