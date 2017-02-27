@@ -6,7 +6,7 @@
   <description>Authentication via LDAP.</description>
   <url>https://www.plesk.com</url>
   <version>2.0</version>
-  <release>2</release>
+  <release>3</release>
   <vendor>Plesk</vendor>
   <plesk_min_version>12.0</plesk_min_version>
 </module>
