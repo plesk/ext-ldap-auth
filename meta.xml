@@ -7,7 +7,7 @@
   <category>auth</category>
   <url>https://github.com/plesk/ext-ldap-auth</url>
   <version>2.0</version>
-  <release>3</release>
+  <release>4</release>
   <vendor>Plesk</vendor>
   <plesk_min_version>12.0</plesk_min_version>
 </module>
