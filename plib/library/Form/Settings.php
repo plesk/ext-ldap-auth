@@ -30,12 +30,10 @@ class Modules_LdapAuth_Form_Settings extends pm_Form_Simple
             'value' => pm_Settings::get('loginSuffix'),
         ));
 
-        if (version_compare(pm_ProductInfo::getVersion(), '12.5.29', '>=')) {
-            $this->addElement('checkbox', 'disableNativeAuth', array(
-                'label' => $this->lmsg('fieldDisableNativeAuth'),
-                'value' => (bool)pm_Settings::get('disableNativeAuth'),
-            ));
-        }
+        $this->addElement('checkbox', 'disableNativeAuth', array(
+            'label' => $this->lmsg('fieldDisableNativeAuth'),
+            'value' => (bool)pm_Settings::get('disableNativeAuth'),
+        ));
 
         $this->addControlButtons(array(
             'cancelHidden' => true,
@@ -50,10 +48,7 @@ class Modules_LdapAuth_Form_Settings extends pm_Form_Simple
         pm_Settings::set('ssl', $values['ssl']);
         pm_Settings::set('loginPrefix', $values['loginPrefix']);
         pm_Settings::set('loginSuffix', $values['loginSuffix']);
-
-        if (version_compare(pm_ProductInfo::getVersion(), '12.5.29', '>=')) {
-            pm_Settings::set('disableNativeAuth', (bool)$values['disableNativeAuth']);
-        }
+        pm_Settings::set('disableNativeAuth', (bool)$values['disableNativeAuth']);
     }
 
 }
