@@ -8,7 +8,7 @@ class Modules_LdapAuth_Auth extends pm_Hook_Auth
         $ch = curl_init();
         $protocol = "ldap://";
         $port = "389";
-        if (pm_Settings::get('ssl') == true) {
+        if ((bool)pm_Settings::get('ssl')) {
             $protocol = "ldaps://";
             $port = "636";
         }
