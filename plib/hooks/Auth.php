@@ -5,6 +5,8 @@ class Modules_LdapAuth_Auth extends pm_Hook_Auth
 
     public function auth($login, $password)
     {
+        \pm_Log::debug('LDAP server connecting...');
+
         $ch = curl_init();
         $protocol = "ldap://";
         $port = "389";
@@ -18,6 +20,11 @@ class Modules_LdapAuth_Auth extends pm_Hook_Auth
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_USERPWD, pm_Settings::get('loginPrefix') . $login . pm_Settings::get('loginSuffix') . ":" . $password);
         $result = curl_exec($ch);
+        if ($result === false) {
+            \pm_Log::err('LDAP server communication failed: ' . curl_error($ch));
+        } else {
+            \pm_Log::debug('LDAP server communication succeed');
+        }
         curl_close($ch);
 
         return false !== $result;
