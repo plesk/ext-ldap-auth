@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright 1999-2019. Plesk International GmbH. -->
+<!-- Copyright 1999-2020. Plesk International GmbH. -->
 <module>
   <id>ldap-auth</id>
   <name>LDAP Auth</name>
   <description>Authentication via LDAP.</description>
   <category>auth</category>
   <url>https://github.com/plesk/ext-ldap-auth</url>
-  <version>2.1.1</version>
+  <version>2.1.2</version>
   <release>1</release>
   <vendor>Plesk</vendor>
   <plesk_min_version>17.0</plesk_min_version>
