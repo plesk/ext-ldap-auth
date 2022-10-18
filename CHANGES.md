@@ -1,6 +1,6 @@
 # 2.1.3
 
-* [-] Fixed Windows AD authentication via SSL:TLS. (EXTPLESK-3999)
+* [-] Fixed AD authentication via SSL:TLS. (EXTPLESK-3999)
 
 # 2.1.2
 
